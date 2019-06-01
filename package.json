@@ -1,8 +1,8 @@
 {
   "name": "auto-push-webpack-plugin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Automated push to specified branch after build",
-  "main": "./dist/mian.js",
+  "main": "./dist/main.js",
   "types": "./dist/main.d.ts",
   "scripts": {
     "dev:build": "tsc -w -p ./tsconfig.json",
