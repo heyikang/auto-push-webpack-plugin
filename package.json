@@ -8,8 +8,7 @@
     "dev:build": "tsc -w -p ./tsconfig.json",
     "dev:run": "nodemon dist/main.js",
     "dev": "npm-run-all --parallel dev:*",
-    "build": "shx rm -rf ./dist && tsc",
-    "prepublish": "npm run build"
+    "build": "shx rm -rf ./dist && tsc"
   },
   "keywords": [
     "git",

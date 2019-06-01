@@ -2,5 +2,5 @@ node_modules
 .vscode
 *.log
 .DS_Store
-dist
-# .auto_push_*
+# dist
+.auto_push_*
