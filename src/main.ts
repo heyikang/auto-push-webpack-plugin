@@ -14,10 +14,8 @@ interface IAutoPushWebpackPluginOptions {
   branch?: string;
 }
 
-class AutoPushWebpackPlugin extends Plugin {
-  constructor(private option: IAutoPushWebpackPluginOptions) {
-    super();
-  }
+class AutoPushWebpackPlugin implements Plugin {
+  constructor(private option: IAutoPushWebpackPluginOptions) {}
   apply(compiler: Compiler) {
     compiler.hooks.done.tapPromise('AutoPushWebpackPlugin' , async () => {
       const outputPaht = compiler.outputPath;

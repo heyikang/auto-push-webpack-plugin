@@ -1,12 +1,10 @@
 "use strict";
 const tslib_1 = require("tslib");
-const webpack_1 = require("webpack");
 const fs_1 = require("./fs");
 const constants_1 = require("./constants");
 const git_1 = require("./git");
-class AutoPushWebpackPlugin extends webpack_1.Plugin {
+class AutoPushWebpackPlugin {
     constructor(option) {
-        super();
         this.option = option;
     }
     apply(compiler) {

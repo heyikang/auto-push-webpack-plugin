@@ -9,7 +9,7 @@ interface IAutoPushWebpackPluginOptions {
      */
     branch?: string;
 }
-declare class AutoPushWebpackPlugin extends Plugin {
+declare class AutoPushWebpackPlugin implements Plugin {
     private option;
     constructor(option: IAutoPushWebpackPluginOptions);
     apply(compiler: Compiler): void;
