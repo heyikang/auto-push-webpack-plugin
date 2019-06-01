@@ -1,0 +1,27 @@
+{
+  "name": "auto-push-webpack-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev:build": "tsc -w -p ./tsconfig.json",
+    "dev:run": "nodemon dist/main.js",
+    "dev": "npm-run-all --parallel dev:*",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.0",
+    "@types/node": "^12.0.4",
+    "@types/webpack": "^4.4.32",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.5.1",
+    "webpack": "^4.32.2"
+  },
+  "dependencies": {
+    "cross-spawn": "^6.0.5",
+    "tslib": "^1.9.3"
+  }
+}

@@ -1,0 +1,1 @@
+export const UPLOAD_DIR = '.auto_push_dir';
