@@ -8,6 +8,7 @@
 
 - 请添加 `.gitignore` 忽略 `.auto_push_dir` 目录
 
+- 在 *webpack 4.30中测试通过*
 
 
 - 安装
