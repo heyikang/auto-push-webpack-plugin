@@ -10,6 +10,17 @@
 
 
 
+- 安装
+
+```bash
+  # use npm
+  npm install auto-push-webpack-plugin
+  # or yarn
+  yarn add auto-push-webpack-plugin
+```
+
+
+
 - 使用（在TS中）
 
 ```ts
