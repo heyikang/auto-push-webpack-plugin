@@ -6,6 +6,8 @@
 
 - 默认分支为 `dist`
 
+- 请添加 `.gitignore` 忽略 `.auto_push_dir` 目录
+
 
 
 - 使用（在TS中）
