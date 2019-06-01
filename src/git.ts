@@ -14,7 +14,7 @@ const branch = 'kangkang';
   if (await exists(UPLOAD_FULL_PATH)) {
     await delteDir(UPLOAD_FULL_PATH);
   };
-  await copyDir(path.resolve(__dirname, '..', 'node_modules'), UPLOAD_FULL_PATH);
+  await copyDir(path.resolve(__dirname, '..', 'src'), UPLOAD_FULL_PATH);
   spawn.sync('git', ['init'], {
     cwd: UPLOAD_FULL_PATH,
     stdio: 'inherit'
@@ -23,7 +23,7 @@ const branch = 'kangkang';
     cwd: UPLOAD_FULL_PATH,
     stdio: 'inherit'
   });
-  spawn.sync('git', ['commit', '-m', `"${new Date().toLocaleString()}"`], {
+  spawn.sync('git', ['commit', '-m', `${new Date().toLocaleString()}`], {
     cwd: UPLOAD_FULL_PATH,
     stdio: 'inherit'
   });
