@@ -1,15 +1,24 @@
 {
   "name": "auto-push-webpack-plugin",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automated push to specified branch after build",
+  "main": "./dist/mian.js",
+  "types": "./dist/main.d.ts",
   "scripts": {
     "dev:build": "tsc -w -p ./tsconfig.json",
     "dev:run": "nodemon dist/main.js",
     "dev": "npm-run-all --parallel dev:*",
-    "build": "shx rm -rf ./dist && tsc"
+    "build": "shx rm -rf ./dist && tsc",
+    "prepublish": "npm run build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "git",
+    "push",
+    "auto push",
+    "webpack",
+    "plugin"
+  ],
+  "author": "heyikang",
   "license": "MIT",
   "devDependencies": {
     "@types/cross-spawn": "^6.0.0",

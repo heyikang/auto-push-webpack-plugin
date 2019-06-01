@@ -3,4 +3,4 @@ node_modules
 *.log
 .DS_Store
 dist
-.auto_push_*
+# .auto_push_*
