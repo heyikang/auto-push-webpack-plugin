@@ -1,20 +1,11 @@
 import spawn from 'cross-spawn';
-import { cwd } from 'process';
-import { UPLOAD_DIR } from './constants';
-import path from 'path';
-import { copyDir, delteDir, exists } from './fs';
+import { UPLOAD_FULL_PATH } from './constants';
 
-const UPLOAD_FULL_PATH = path.join(cwd(), UPLOAD_DIR);
-
-const repoURL = 'git@github.com:heyikang/heyikang.github.io.git';
-
-const branch = 'kangkang';
-
-(async () => {
-  if (await exists(UPLOAD_FULL_PATH)) {
-    await delteDir(UPLOAD_FULL_PATH);
-  };
-  await copyDir(path.resolve(__dirname, '..', 'src'), UPLOAD_FULL_PATH);
+/**
+ *  @param repo 仓库地址
+ *  @param branch 指定分支
+ */
+export const push = (repo: string, branch: string) => {
   spawn.sync('git', ['init'], {
     cwd: UPLOAD_FULL_PATH,
     stdio: 'inherit'
@@ -23,15 +14,15 @@ const branch = 'kangkang';
     cwd: UPLOAD_FULL_PATH,
     stdio: 'inherit'
   });
-  spawn.sync('git', ['commit', '-m', `${new Date().toLocaleString()}`], {
+  spawn.sync('git', ['commit', '-m', `"${new Date().toLocaleString()}"`], {
     cwd: UPLOAD_FULL_PATH,
     stdio: 'inherit'
   });
-  spawn.sync('git', ['push', repoURL, `HEAD:${branch}`, '--force'], {
+  spawn.sync('git', ['push', repo, `HEAD:${branch}`, '--force'], {
     cwd: UPLOAD_FULL_PATH,
     stdio: 'inherit'
   });
-})();
+}
 
 
 

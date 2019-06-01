@@ -23,7 +23,7 @@ export const createWriteStream = fs.createWriteStream;
  * @description 递归删除文件夹下面的文件
  */
 
-export const delteDir = async (p: string) => {
+export const deleteDir = async (p: string) => {
   if (!await exists(p)) {
     throw new Error(`p => "${p}" not exists!`);
   };
@@ -36,7 +36,7 @@ export const delteDir = async (p: string) => {
     const joinPath = path.join(p, items[key]);
     const joinPathState = await state(joinPath);
     if (joinPathState.isDirectory()) {
-      await delteDir(joinPath);
+      await deleteDir(joinPath);
     } else {
       await unlink(joinPath);
     }
