@@ -8,7 +8,8 @@
 
 - 请添加 `.gitignore` 忽略 `.auto_push_dir` 目录
 
-- 在 *webpack 4.30中测试通过*
+- 支持 Webapck 4.x
+
 
 
 - 安装
@@ -30,8 +31,10 @@
     plugins: [
       // ... other plugins
       new AutoPushWebpackPlugin({
+        // is required
         repo: 'git@github.com:heyikang/auto-push-webpack-plugin.git',
         branch: 'dist' // default value dist
+        sleep: 2000, // default value 2000 type is number
       })
     ]
   }
@@ -45,8 +48,10 @@
     plugins: [
       // ... other plugins
       new AutoPushWebpackPlugin({
+        // is required
         repo: 'git@github.com:heyikang/auto-push-webpack-plugin.git',
         branch: 'dist' // default value dist
+        sleep: 2000, // default value 2000 type is number
       })
     ]
   }
