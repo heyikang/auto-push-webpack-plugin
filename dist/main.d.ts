@@ -8,6 +8,11 @@ interface IAutoPushWebpackPluginOptions {
      * @description 指定分支默认 `dist`
      */
     branch?: string;
+    /**
+     * @description 指定暂停时间 单位 毫秒
+     * @default 2000
+     */
+    sleep?: number;
 }
 declare class AutoPushWebpackPlugin implements Plugin {
     private option;
